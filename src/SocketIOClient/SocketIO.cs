@@ -422,6 +422,9 @@ namespace SocketIOClient
                     await Task.Delay(100);
                 }
             }
+            catch (Exception ex) {
+                Debug.WriteLine(ex);
+            }
             finally
             {
                 _connectingLock.Release();
